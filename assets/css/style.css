@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    border: 10px solid #f84a80;
+    width: 100%;
+    height: 100%;
+    color: #ffb8c1;
+}
+
+header {
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    border: 10px solid #f84a80;
+    border-bottom: none;
+    
+}
+
+.header-nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    
+    padding: 25px;
+    justify-content: center;
+    background-color: black;
+    color: #ffb8c1;
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(-100%);
+    max-width: 300px;
+    z-index: 100;
+}
+
+.header-nav-mobile-icon {
+    color: #ffb8c1;
+    font-size: 22px;
+}
+.header-nav-mobile-icon:hover {
+    color: #f84a80;
+}
+
+.header-nav-mobile-menu {
+    padding-left: 20px;
+    display: block;
+}
+.header-nav-input:checked ~ .header-nav-mobile {
+    display: block;
+    transform: translateX(0);
+}
+.header-nav-input2:checked ~ .header-nav-mobile {
+    display: none;
+    transform: translateX(-100%);
+}
+
+.header-nav-mobile-close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav-input {
+    display: none;
+}
+.header-nav-input2 {
+    display: none;
+}
+
+.header-nav-mobile-list {
+    display: flex;
+    flex-direction: column;
+    margin: 300px 0px;
+}
+
+.header-nav-mobile-list li {
+    list-style: none;
+    padding: 8px;
+}
+
+.header-nav-mobile-list a{
+    color: #ffb8c1;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.header-nav-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav-main {
+    display: flex;
+}
+
+.header-nav-main > li {
+    padding: 10px;
+    list-style: none;
+    position: relative;
+}
+
+.header-nav-main a {
+    text-decoration: none;
+    color: currentColor;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.nav > li:hover,
+.header-nav-main > li > a:hover {
+    color: #f84a80;
+    transition: color ease-out 0.2s;
+}
+
+
+.header-subnav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav-main li:hover .nav {
+    display: block;
+}
+
+.nav {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #000;
+    width: max-content;
+    border-right: 0.5px solid #ffb8c1;
+    border-bottom: 0.5px solid #ffb8c1;
+}
+
+.nav > li {
+    padding: 10px;
+}
+
+.header-nav__logo {
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav__logo img {
+    width: 70%;
+    height: 100%;
+}
+
+.header-cart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    position: relative;
+}
+
+.header-cart-1 {
+    color: currentColor;
+    padding-right: 20px;
+    text-decoration: none;
+}
+.header-cart-1:hover {
+    color: #f84a80;
+    transition: color ease-out 0.2s;
+}
+
+.header-cart-1 span {
+    position: absolute;
+    top: -5px;
+    right: 9%;
+    font-size: 12px;
+}
+
+/* Body */
+#main {
+    margin-top: 120px;
+}
+
+.rose__merch {
+    text-align: center;
+}
+
+.rose__merch img{
+    background-color: #ffb8c1;
+    width: 100%;
+}
+
+.rose__merch .img2 {
+    display: none;
+}
+
+.rose__merch a {
+    color: #ffb8c1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.rose__merch a:hover {
+    color:#f84a80
+}
+.rose__merch a:hover .img2 {
+    display: block;
+    color: #f84a80;
+}
+.rose__merch a:hover .img1 {
+    display: none;
+    color: #f84a80;
+}
+
+#footer {
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 60px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.footer-social a {
+    color: #ffb8c1;
+    font-size: 26px;
+    padding: 10px;
+}
+
+.footer-social a:hover {
+    color: #f84a80;
+    transition: color ease-out 0.2s;
+}
+
+.footer-policy {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-info a {
+    color: #f84a80;
+    font-size: 11px;
+    padding: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-info span {
+    color: white;
+    padding: 0 10px;
+    word-spacing: 1px;
+    letter-spacing: 0px;
+}
